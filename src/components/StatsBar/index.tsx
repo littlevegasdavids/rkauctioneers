@@ -2,7 +2,12 @@ import { Box, Text, SimpleGrid } from "@chakra-ui/react";
 
 export const StatsBar = () => {
   return (
-    <Box bg="ink.800">
+    <Box
+      bg="ink.800"
+      shadow="xl"
+      placeSelf="flex-start"
+      w="full"
+    >
       <SimpleGrid columns={{ base: 2, md: 4 }}>
         <Box
           py={10}

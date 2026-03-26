@@ -16,7 +16,7 @@ export const Footer = () => {
     <Box
       bg="ink.900"
       color="rgba(255,255,255,0.38)"
-      py={16}
+      py={10}
       px={{ base: 6, lg: 20 }}
     >
       <Grid

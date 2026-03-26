@@ -12,7 +12,12 @@ import {
 
 export const ServicesSection = () => {
   return (
-    <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} bg="bg.raised">
+    <Grid
+      templateColumns={{ base: "1fr", lg: "1fr 1fr" }}
+      bg="bg.raised"
+      w="full"
+      shadow="lg"
+    >
       {/* Sessions Panel */}
       <Box
         p={20}

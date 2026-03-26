@@ -21,8 +21,7 @@ export const Hero = () => {
       {/* Hero Left */}
       <Flex
         direction="column"
-        justify="flex-end"
-        p={{ base: 16, lg: 20 }}
+        justify="center"
         bg="white"
       >
         <HStack gap={3} mb={8}>

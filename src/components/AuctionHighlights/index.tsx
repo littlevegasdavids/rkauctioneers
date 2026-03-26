@@ -13,8 +13,8 @@ import { AUCTION_HIGHLIGHTS } from "../../constants";
 
 export const AuctionHighlights = () => {
   return (
-    <Box bg="bg.page" py={25} px={{ base: 6, lg: 20 }}>
-      <Flex justify="space-between" align="flex-end" mb={14}>
+    <Flex direction="column" gap={8} p={12} bg="bg.page" shadow="md" border="1px solid" borderColor="neutral.100">
+      <Flex justify="space-between" align="flex-end">
         <Box>
           <HStack gap={3} mb={4}>
             <Box w="24px" h="1px" bg="brand.primary" />
@@ -50,9 +50,7 @@ export const AuctionHighlights = () => {
           xl: "repeat(5, 1fr)",
         }}
         gap={6}
-        justifyItems="center"
-        maxW="1400px"
-        mx="auto"
+        justifyItems="start"
       >
         {AUCTION_HIGHLIGHTS.map((item) => (
           <GridItem key={item.id} w="100%" maxW="280px">
@@ -118,6 +116,6 @@ export const AuctionHighlights = () => {
           </GridItem>
         ))}
       </Grid>
-    </Box>
+    </Flex>
   );
 };

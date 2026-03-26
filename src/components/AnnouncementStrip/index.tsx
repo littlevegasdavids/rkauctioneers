@@ -5,8 +5,8 @@ export const AnnouncementStrip = () => {
     <Box
       mt="72px"
       bg="brand.subtle"
-      borderBottom="1px solid"
-      borderColor="brand.primary"
+      border="1px solid"
+      borderColor="brand.300"
       color="text.primary"
       textAlign="center"
       py={3}

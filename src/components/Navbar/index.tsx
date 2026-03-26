@@ -3,11 +3,13 @@ import {
   Button,
   Flex,
   HStack,
+  Image,
   Link,
   Text,
   VStack,
   Container,
 } from "@chakra-ui/react";
+import Logo from "@/assets/logo/logo.avif";
 
 export const NavBar = () => {
   return (
@@ -26,26 +28,12 @@ export const NavBar = () => {
         <Flex align="center" justify="space-between" h="full">
           {/* Logo */}
           <VStack gap={0} align="start">
-            <Text
-              fontFamily="heading"
-              fontSize="19px"
-              fontWeight="medium"
-              letterSpacing="0.04em"
-              color="text.primary"
-              lineHeight={1}
-            >
-              Russell Kaplan
-            </Text>
-            <Text
-              fontFamily="body"
-              fontSize="9px"
-              letterSpacing="0.24em"
-              textTransform="uppercase"
-              color="text.secondary"
-              lineHeight={1}
-            >
-              Auctioneers
-            </Text>
+            <Image
+              src={Logo}
+              alt="Russell Kaplan Auctioneers"
+              h="50px"
+              objectFit="contain"
+            />
           </VStack>
 
           {/* Navigation Links */}

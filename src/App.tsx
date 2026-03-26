@@ -1,9 +1,7 @@
+import { HomePage } from './pages'
+
 const App = () => {
-  return (
-    <div>
-      <h1>Russell Kaplan Auctioneers</h1>
-    </div>
-  )
+  return <HomePage />
 }
 
 export default App

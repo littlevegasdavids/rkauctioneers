@@ -2,12 +2,13 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
-import { Provider } from './components'
+import system from './theme/index.ts'
+import { ChakraProvider } from '@chakra-ui/react'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Provider>
+    <ChakraProvider value={system}>
       <App />
-    </Provider>
+    </ChakraProvider>
   </StrictMode>,
 )

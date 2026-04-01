@@ -7,7 +7,6 @@ import {
   AuctionHighlights,
   ServicesSection,
   About,
-  Contact,
   Footer,
 } from "@/components";
 import { Box, VStack } from "@chakra-ui/react";

@@ -92,14 +92,14 @@ export const NavBar = () => {
 
           {/* CTA */}
           <HStack gap={5}>
-            <Text
+            {/* <Text
               fontSize="sm"
               letterSpacing="0.04em"
               display={{ base: "none", lg: "block" }}
               fontWeight="bold"
             >
               +27 11 789 7422
-            </Text>
+            </Text> */}
             <Button
               bg="brand.primary"
               color="text.on-brand"

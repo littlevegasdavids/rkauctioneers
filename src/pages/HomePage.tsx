@@ -1,48 +1,28 @@
 import {
-  Container,
-  NavBar,
-  AnnouncementStrip,
   Hero,
   StatsBar,
   AuctionHighlights,
-  ServicesSection,
-  About,
-  Footer,
 } from "@/components";
-import { Box, VStack } from "@chakra-ui/react";
+import { VStack } from "@chakra-ui/react";
 
 const HomePage = () => {
   return (
-    <Box bg="bg.page" minH="100vh" w='full'>
-      {/* Navbar - Full width */}
-      <NavBar />
+    <VStack gap="10" w="full">
+      {/* Hero Section - Breaks out to full width */}
+      <Hero />
 
-      {/* Announcement Strip - Full width */}
-      <AnnouncementStrip />
+      {/* Stats Bar */}
+      <StatsBar />
 
-      {/* Main Content Container */}
-      <Container bg="white" shadow="xl" py={6}>
-        <VStack gap="10">
-          {/* Hero Section - Breaks out to full width */}
-          <Hero />
+      {/* Highlights Section */}
+      <AuctionHighlights />
 
-          {/* Stats Bar */}
-          <StatsBar />
+      {/* Showroom Section */}
+      {/* <ShowRoom /> */}
 
-          {/* Highlights Section */}
-          <AuctionHighlights />
-
-          {/* Showroom Section */}
-          {/* <ShowRoom /> */}
-
-          {/* Contact Section */}
-          {/* <Contact /> */}
-        </VStack>
-      </Container>
-
-      {/* Footer - Full width */}
-      <Footer />
-    </Box>
+      {/* Contact Section */}
+      {/* <Contact /> */}
+    </VStack>
   );
 };
 

@@ -48,6 +48,9 @@ export const NavBar = () => {
               color="brand.hover"
               fontWeight="medium"
               _hover={{ color: "text.primary" }}
+              onClick={() => {
+                navigate("/rkauctioneers/");
+              }}
             >
               Home
             </Text>
@@ -70,7 +73,6 @@ export const NavBar = () => {
               letterSpacing="0.13em"
               textTransform="uppercase"
               color="text.secondary"
-              _hover={{ color: "text.primary" }}
               _hover={{ color: "text.primary", textDecoration: "underline" }}
             >
               Sessions & Times

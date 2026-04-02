@@ -32,12 +32,6 @@ const HomePage = () => {
           {/* Highlights Section */}
           <AuctionHighlights />
 
-          {/* Services Section */}
-          <ServicesSection />
-
-          {/* About Section */}
-          <About />
-
           {/* Showroom Section */}
           {/* <ShowRoom /> */}
 

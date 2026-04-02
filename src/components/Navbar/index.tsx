@@ -10,8 +10,10 @@ import {
   Container,
 } from "@chakra-ui/react";
 import Logo from "@/assets/logo/logo.avif";
+import { useNavigate } from "react-router-dom";
 
 export const NavBar = () => {
+  const navigate = useNavigate();
   return (
     <Box
       position="fixed"
@@ -38,56 +40,64 @@ export const NavBar = () => {
 
           {/* Navigation Links */}
           <HStack gap={0} display={{ base: "none", md: "flex" }}>
-            <Link
+            <Text
               px={4}
               fontSize="12px"
               letterSpacing="0.13em"
               textTransform="uppercase"
               color="brand.hover"
               fontWeight="medium"
+              _hover={{ color: "text.primary" }}
             >
               Home
-            </Link>
-            <Link
+            </Text>
+            <Text
+              px={4}
+              fontSize="12px"
+              letterSpacing="0.13em"
+              textTransform="uppercase"
+              color="text.secondary"
+              _hover={{ color: "text.primary", textDecoration: "underline" }}
+              onClick={() => {
+                navigate("/rkauctioneers/services");
+              }}
+            >
+              Services
+            </Text>
+            <Text
               px={4}
               fontSize="12px"
               letterSpacing="0.13em"
               textTransform="uppercase"
               color="text.secondary"
               _hover={{ color: "text.primary" }}
+              _hover={{ color: "text.primary", textDecoration: "underline" }}
             >
               Sessions & Times
-            </Link>
-            <Link
+            </Text>
+            <Text
               px={4}
               fontSize="12px"
               letterSpacing="0.13em"
               textTransform="uppercase"
               color="text.secondary"
-              _hover={{ color: "text.primary" }}
-            >
-              Valuations
-            </Link>
-            <Link
-              px={4}
-              fontSize="12px"
-              letterSpacing="0.13em"
-              textTransform="uppercase"
-              color="text.secondary"
-              _hover={{ color: "text.primary" }}
+              _hover={{ color: "text.primary", textDecoration: "underline" }}
+              onClick={() => {
+                navigate("/rkauctioneers/about");
+              }}
             >
               About
-            </Link>
-            <Link
+            </Text>
+            <Text
               px={4}
               fontSize="12px"
               letterSpacing="0.13em"
               textTransform="uppercase"
               color="text.secondary"
-              _hover={{ color: "text.primary" }}
+              _hover={{ color: "text.primary", textDecoration: "underline" }}
             >
               Contact
-            </Link>
+            </Text>
           </HStack>
 
           {/* CTA */}

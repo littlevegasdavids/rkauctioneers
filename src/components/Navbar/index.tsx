@@ -148,12 +148,12 @@ export const NavBar = () => {
                 bg: "brand.hover",
                 transform: "translateY(-1px)",
               }}
-              // leftIcon={
-              //   <Icon viewBox="0 0 12 12" w={3} h={3}>
-              //     <circle cx="6" cy="6" r="4.5" fill="none" stroke="currentColor" strokeWidth="1.6"/>
-              //     <path d="M6 3.5v2.5l1.5 1.5" fill="none" stroke="currentColor" strokeWidth="1.6"/>
-              //   </Icon>
-              // }
+              onClick={() => {
+                window.open(
+                  "https://bidlive.rkauctioneers.co.za/login",
+                  "_blank",
+                );
+              }}
             >
               Register to Bid
             </Button>

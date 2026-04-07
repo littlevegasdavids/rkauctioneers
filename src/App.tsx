@@ -1,11 +1,19 @@
 import { Route, Routes } from "react-router-dom";
 import { HomePage } from "./pages";
-import { About, ServicesSection, Container, NavBar, AnnouncementStrip, Footer } from "./components";
+import {
+  About,
+  ServicesSection,
+  Container,
+  NavBar,
+  AnnouncementStrip,
+  Footer,
+} from "./components";
 import { Flex } from "@chakra-ui/react";
+import { SessionsPage } from "./pages/SessionsPage";
 
 const App = () => {
   return (
-    <Flex direction="column" bg="bg.page" minH="100vh" w='full'>
+    <Flex direction="column" bg="bg.page" minH="100vh" w="full">
       {/* Navbar - Full width */}
       <NavBar />
 
@@ -18,6 +26,7 @@ const App = () => {
           <Route path="/rkauctioneers/" element={<HomePage />} />
           <Route path="/rkauctioneers/about" element={<About />} />
           <Route path="/rkauctioneers/services" element={<ServicesSection />} />
+          <Route path="/rkauctioneers/sessions" element={<SessionsPage />} />
         </Routes>
       </Container>
 

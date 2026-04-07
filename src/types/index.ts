@@ -4,3 +4,12 @@ export interface ItemAuctionHighlight {
   image: string;
   amount: string;
 }
+
+export interface AuctionSession {
+  session: number;
+  date: string;
+  time: string;
+  lots: string;
+  categories: string;
+  approxRate: string;
+};

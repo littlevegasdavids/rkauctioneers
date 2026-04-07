@@ -4,7 +4,6 @@ import {
   Flex,
   HStack,
   Image,
-  Link,
   Text,
   VStack,
   Container,
@@ -14,6 +13,8 @@ import { useNavigate } from "react-router-dom";
 
 export const NavBar = () => {
   const navigate = useNavigate();
+  const currentPage = window.location.pathname.split("/")[2];
+
   return (
     <Box
       position="fixed"
@@ -45,12 +46,13 @@ export const NavBar = () => {
               fontSize="12px"
               letterSpacing="0.13em"
               textTransform="uppercase"
-              color="brand.hover"
-              fontWeight="medium"
+              color={currentPage === "" ? "brand.hover" : "text.secondary"}
+              fontWeight={currentPage === "" ? "bold" : "normal"}
               _hover={{ color: "text.primary" }}
               onClick={() => {
                 navigate("/rkauctioneers/");
               }}
+              cursor="pointer"
             >
               Home
             </Text>
@@ -59,11 +61,15 @@ export const NavBar = () => {
               fontSize="12px"
               letterSpacing="0.13em"
               textTransform="uppercase"
-              color="text.secondary"
+              color={
+                currentPage === "services" ? "brand.hover" : "text.secondary"
+              }
+              fontWeight={currentPage === "services" ? "bold" : "normal"}
               _hover={{ color: "text.primary", textDecoration: "underline" }}
               onClick={() => {
                 navigate("/rkauctioneers/services");
               }}
+              cursor="pointer"
             >
               Services
             </Text>
@@ -72,8 +78,15 @@ export const NavBar = () => {
               fontSize="12px"
               letterSpacing="0.13em"
               textTransform="uppercase"
-              color="text.secondary"
+              color={
+                currentPage === "sessions" ? "brand.hover" : "text.secondary"
+              }
+              fontWeight={currentPage === "sessions" ? "bold" : "normal"}
               _hover={{ color: "text.primary", textDecoration: "underline" }}
+              onClick={() => {
+                navigate("/rkauctioneers/sessions");
+              }}
+              cursor="pointer"
             >
               Sessions & Times
             </Text>
@@ -82,11 +95,13 @@ export const NavBar = () => {
               fontSize="12px"
               letterSpacing="0.13em"
               textTransform="uppercase"
-              color="text.secondary"
+              color={currentPage === "about" ? "brand.hover" : "text.secondary"}
+              fontWeight={currentPage === "about" ? "bold" : "normal"}
               _hover={{ color: "text.primary", textDecoration: "underline" }}
               onClick={() => {
                 navigate("/rkauctioneers/about");
               }}
+              cursor="pointer"
             >
               About
             </Text>
@@ -95,8 +110,15 @@ export const NavBar = () => {
               fontSize="12px"
               letterSpacing="0.13em"
               textTransform="uppercase"
-              color="text.secondary"
+              color={
+                currentPage === "contact" ? "brand.hover" : "text.secondary"
+              }
+              fontWeight={currentPage === "contact" ? "bold" : "normal"}
               _hover={{ color: "text.primary", textDecoration: "underline" }}
+              onClick={() => {
+                navigate("/rkauctioneers/contact");
+              }}
+              cursor="pointer"
             >
               Contact
             </Text>

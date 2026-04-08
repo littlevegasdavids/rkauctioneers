@@ -2,14 +2,13 @@ import { Route, Routes } from "react-router-dom";
 import { HomePage } from "./pages";
 import {
   About,
-  ServicesSection,
   Container,
   NavBar,
   AnnouncementStrip,
   Footer,
 } from "./components";
 import { Flex } from "@chakra-ui/react";
-import { SessionsPage } from "./pages/SessionsPage";
+import { SessionsPage, ValuationsPage } from "./pages";
 
 const App = () => {
   return (
@@ -25,7 +24,7 @@ const App = () => {
         <Routes>
           <Route path="/rkauctioneers/" element={<HomePage />} />
           <Route path="/rkauctioneers/about" element={<About />} />
-          <Route path="/rkauctioneers/services" element={<ServicesSection />} />
+          <Route path="/rkauctioneers/valuations" element={<ValuationsPage />} />
           <Route path="/rkauctioneers/sessions" element={<SessionsPage />} />
         </Routes>
       </Container>

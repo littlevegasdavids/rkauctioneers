@@ -1,7 +1,7 @@
 import { Hero, StatsBar, AuctionHighlights } from "@/components";
 import { VStack, Box, Heading, Text, HStack } from "@chakra-ui/react";
 
-const HomePage = () => {
+export const HomePage = () => {
   return (
     <VStack gap="10" w="full">
       {/* Hero Section - Breaks out to full width */}
@@ -79,5 +79,3 @@ const HomePage = () => {
     </VStack>
   );
 };
-
-export default HomePage;

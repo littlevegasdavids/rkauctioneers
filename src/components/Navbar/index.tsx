@@ -62,16 +62,16 @@ export const NavBar = () => {
               letterSpacing="0.13em"
               textTransform="uppercase"
               color={
-                currentPage === "services" ? "brand.hover" : "text.secondary"
+                currentPage === "valuations" ? "brand.hover" : "text.secondary"
               }
-              fontWeight={currentPage === "services" ? "bold" : "normal"}
+              fontWeight={currentPage === "valuations" ? "bold" : "normal"}
               _hover={{ color: "text.primary", textDecoration: "underline" }}
               onClick={() => {
-                navigate("/rkauctioneers/services");
+                navigate("/rkauctioneers/valuations");
               }}
               cursor="pointer"
             >
-              Services
+              Valuations
             </Text>
             <Text
               px={4}
